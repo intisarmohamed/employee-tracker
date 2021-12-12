@@ -51,15 +51,22 @@ const getEmployees = () => {
 };
 
 const constructDepartmentChoices = (departments) => {
+  const departmentChoices=["Finance"];
   // return an array of department choices
+  return departmentChoices;
 };
 
 const constructRoleChoices = (roles) => {
+  const  roleChoices=["Financial Analyst","Junior Financial Analyst","Financial Manager"];
   // return an array of role choices
+  return roleChoices;
 };
 
 const constructEmployeeChoices = (roles) => {
+  
+  const employeeChoices=["firstname","lastname","manager id","role id"];
   // return an array of employee choices
+  return employeeChoices;
 };
 
 // const db = mysql.createConnection(
