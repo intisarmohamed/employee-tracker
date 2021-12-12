@@ -69,17 +69,17 @@ const constructEmployeeChoices = (roles) => {
   return employeeChoices;
 };
 
-// const db = mysql.createConnection(
-//   {
-//     host: 'localhost',
+const db = mysql.createConnection(
+  {
+    host: 'localhost',
 //     // MySQL username,
-//     user: 'root',
+    user: 'root',
 //     // MySQL password
-//     password: '',
-//     database: 'classlist_db',
-//   },
-//   console.log(`Connected to the classlist_db database.`)
-// );
+   password: '',
+   database: 'classlist_db',
+   },
+  console.log(`Connected to the classlist_db database.`)
+);
 
 const start = () => {
   // declare one question with list of actions
