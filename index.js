@@ -82,6 +82,12 @@ const db = mysql.createConnection(
 );
 
 const start = () => {
+  inquirer.prompt([{
+    name:"action",
+    type:"list",
+    message:"select which action you would like to complete",
+    choices:["display department","display roles","display employees"]
+  }])
   // declare one question with list of actions
   // prompt question and get answer (action)
   // insert if blocks for all actions
@@ -89,11 +95,23 @@ const start = () => {
   // if displayRoles()
   // if displayEmployees()
   if ("addDepartment") {
+    inquirer.prompt([{
+      name:"department",
+      type:"list",
+      message:"select your department",
+      choices:["finance"]
+    }])
     // prompt department questions (name) and get answers
     // construct mysql insert query
     // execute mysql query
   }
   if ("addRole") {
+    inquirer.prompt([{
+      name:"role",
+      type:"list",
+      message:"select which role you would like to add",
+      choices:["Financial analyst","Junior financial analyst","Financial Manager"]
+    }])
     // get departments from DB
     // pass the departments to a choice constructor function
     // prompt question to select department, title, salary and get answers
@@ -101,6 +119,27 @@ const start = () => {
     // execute mysql query
   }
   if ("addEmployee") {
+    inquirer.prompt([{
+      name:"first name",
+      type:"input",
+      message:"Enter first name"
+    },
+    {
+      name:"last name",
+      type:"input",
+      message:"Enter last name"
+    },
+    {
+      name:"roleID",
+      type:"input",
+      message:"Enter role ID"
+    },
+    {
+      name:"managerID",
+      type:"input",
+      message:"Enter manager ID"
+    }
+  ])
     // get roles from DB
     // get employees from DB
     // pass the roles to a choice constructor function
